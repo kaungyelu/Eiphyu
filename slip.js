@@ -86,7 +86,7 @@
                 slip.bets.forEach(item => {
                     const displayNum = formatNumber(item.display || item.num || item.number);
                     const amount = item.amount || 0;
-                    slipData += ` ${displayNum}: ${amount.toLocaleString()}\n`;
+                    slipData += ` ${displayNum}- ${amount.toLocaleString()}\n`;
                 });
             } else if (slip.numbers && slip.numbers.length > 0) {
                 const estimatedAmount = slip.total_amount / slip.numbers.length;
