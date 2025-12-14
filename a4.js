@@ -71,7 +71,7 @@ function processAndAddBets() {
         }
         
         // Case 1: Reverse pattern with two amounts (12-1000r500)
-        const reverseTwoAmountMatch = normalizedLine.match(/^(\d{1,2})[\-\s\.]*(\d+)\s*r\s*(\d+)$/);
+        const reverseTwoAmountMatch = normalizedLine.match(/^(\d{1,2})[\-\=\*\,\s\.]*(\d+)\s*r\s*(\d+)$/);
         if (reverseTwoAmountMatch) {
             const [, numStr, amount1Str, amount2Str] = reverseTwoAmountMatch;
             const num = parseInt(numStr);
