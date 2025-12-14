@@ -271,6 +271,7 @@ function showBetConfirmationDialog(preparedBets, invalidLines, invalidText) {
     `;
     cancelButton.onclick = function() {
         document.body.removeChild(overlay);
+         betInput.focus();
     };
 
     if (invalidLines.length > 0) {
@@ -342,6 +343,7 @@ function showBetConfirmationDialog(preparedBets, invalidLines, invalidText) {
     okButton.onclick = function() {
         document.body.removeChild(overlay);
         addPreparedBets();
+         betInput.focus();
     };
 
     // Button order: Cancel - Copy - OK
